@@ -30,14 +30,7 @@
   margin-left: 50px;
 }
 
-.site-logo {
-  font-family: 'Raleway', sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 26px;
-  line-height: 1.19;
-  letter-spacing: 0.03em;
-  text-decoration: none;
+.header-logo {
   color: $black-text;
   margin-right: 43px;
 }
@@ -59,48 +52,46 @@
   padding-top: 32px;
   padding-bottom: 32px;
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: $blue-text;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 4px;
+    background: $blue-text;
+    border-radius: 2px;
+    opacity: 0;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &:hover::after,
+  &:focus::after,
+  &:active::after {
+    opacity: 1;
+  }
 }
 
 .current {
   position: relative;
-}
 
-.current::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -1px;
-  width: 100%;
-  height: 4px;
-  background: $blue-text;
-  border-radius: 2px;
-}
-
-.site-menu__link::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -1px;
-  width: 100%;
-  height: 4px;
-  background: $blue-text;
-  border-radius: 2px;
-  opacity: 0;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.site-menu__link:hover::after,
-.site-menu__link:focus::after,
-.site-menu__link:active::after {
-  opacity: 1;
-}
-
-.site-menu__link:hover,
-.site-menu__link:focus,
-.site-contacts__link:hover,
-.site-contacts__link:focus {
-  color: $blue-text;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 4px;
+    background: $blue-text;
+    border-radius: 2px;
+  }
 }
 
 .site-contacts__link {
@@ -116,17 +107,23 @@
   justify-content: center;
   text-align: center;
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: $blue-text;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }
 
 .site-contacts__icon {
   content: '';
   fill: currentColor;
   margin-right: 10px;
-}
 
-.site-contacts__icon:hover,
-.site-contacts__icon:focus {
-  fill: currentColor;
-  color: $blue-text;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    fill: currentColor;
+    color: $blue-text;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }

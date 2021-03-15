@@ -34,11 +34,13 @@
   text-align: left;
 }
 
-.footer-address_info {
+.footer-address__info {
   color: $white-text;
+  font-style: normal;
 }
 
-.footer-contact {
+.footer-contact,
+.footer-contact__item {
   margin-top: 9px;
   text-align: left;
 }
@@ -46,4 +48,5 @@
 .footer-contact__link {
   text-decoration: none;
   color: $gray-text-op60;
+  font-style: normal;
 }
